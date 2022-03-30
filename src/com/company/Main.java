@@ -11,6 +11,7 @@ public class Main extends PizzaInfo {
     }
 
 
+    //creates a basic pizza object
     private static void basePizza() {
         MeatTypes meatType = getMeatType();
         System.out.println("Successfully added "+ meatType.name()+".");
@@ -18,6 +19,7 @@ public class Main extends PizzaInfo {
         pizza.showOptions();
     }
 
+    //creates a basic healthy object
     private static void healthyPizza() {
         MeatTypes meatType = getMeatType();
         System.out.println("Successfully added "+ meatType.name()+".");
@@ -25,6 +27,7 @@ public class Main extends PizzaInfo {
         pizza.showOptions();
     }
 
+    //creates a basic premium object
     private static void premiumPizza() {
         MeatTypes meatType = getMeatType();
         System.out.println("Successfully added "+ meatType.name()+".");
@@ -32,6 +35,7 @@ public class Main extends PizzaInfo {
         pizza.showOptions();
     }
 
+    //displays the main menu
     static void mainMenu() {
         System.out.println("Create a new pizza.\n------------------");
         System.out.println("Select a pizza type.");
@@ -44,7 +48,7 @@ public class Main extends PizzaInfo {
         //reading user input
         String input = scanner.nextLine();
 
-        //adding the relevant additional item according to the user input
+        //creating the pizza object according to the user input
         switch (input) {
             case "1":
                 System.out.println("Basic Pizza");
@@ -74,6 +78,7 @@ public class Main extends PizzaInfo {
 
     }
 
+    //reading user input and getting preferred meat type
     private static MeatTypes getMeatType() {
 
         MeatTypes meatType;
@@ -89,7 +94,7 @@ public class Main extends PizzaInfo {
 
         String input = scanner.nextLine();
 
-        //adding the relevant additional item according to the user input
+        //adding the relevant meat type according to the user input
         switch (input) {
             case "1":
                 meatType = MeatTypes.chicken;

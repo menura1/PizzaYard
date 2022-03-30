@@ -50,7 +50,7 @@ public class PremiumPizza extends Pizza{
         System.out.println("Grand total - Rs."+getPrice()+"0/-\n");
     }
 
-    //overriding the name with relevant pizza type
+    //overriding the finishOrder method with relevant pizza type
     @Override
     void finishOrder() {
         System.out.println("Order summary\n--------------");
